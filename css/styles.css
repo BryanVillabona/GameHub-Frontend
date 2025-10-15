@@ -1,0 +1,54 @@
+/* Transiciones suaves para el contenido del acordeón en "Mis Pedidos" */
+.acordeon-contenido {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Utilidad para truncar texto a un número específico de líneas (no usada en el HTML final, pero es buena práctica tenerla) */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Clase para transiciones de transformación (ej. para animaciones al pasar el mouse) */
+.transition-transform {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto de elevación al pasar el mouse sobre un elemento */
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fondo con gradiente (ejemplo, no usado en el HTML final pero útil) */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Transición para el contenedor de mensajes de notificación */
+#mensaje-container {
+  transition: all 0.3s ease;
+}
+
+/* --- Estilos para las Notificaciones Toast --- */
+.toast {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: white;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast.success { background-color: #16a34a; } /* Verde */
+.toast.error { background-color: #dc2626; }   /* Rojo */
+.toast.info { background-color: #2563eb; }    /* Azul */
