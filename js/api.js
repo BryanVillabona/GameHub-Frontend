@@ -1,4 +1,7 @@
-const BASE_URL = 'https://gamehub-api-1rap.onrender.com/api/v1';
+const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const BASE_URL = IS_LOCAL 
+    ? 'http://localhost:4000/api/v1' 
+    : 'https://gamehub-api-1rap.onrender.com/api/v1';
 
 async function fetchAPI(endpoint, options = {}) {
     try {
