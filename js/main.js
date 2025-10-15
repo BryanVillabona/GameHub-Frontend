@@ -105,7 +105,6 @@ async function finalizarCompra() {
         return;
     }
 
-    // Prepara el objeto de venta como lo espera el nuevo backend
     const ventaData = {
         clienteId: usuarioActual.id,
         productos: carrito.map(item => ({
@@ -123,7 +122,7 @@ async function finalizarCompra() {
         ui.renderizarCarrito(carrito, manejadoresCarrito);
         ui.actualizarContadorCarrito(carrito);
         ui.cerrarCarrito();
-        cargarProductos(); // Recargar productos para actualizar el stock en la UI
+        cargarProductos(); 
     } catch (error) {
         ui.mostrarMensaje(`Error en la compra: ${error.message}`, 'error');
     }
@@ -196,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carrito
     document.getElementById('cerrar-carrito').addEventListener('click', ui.cerrarCarrito);
-    // Asumimos que hay un botón para abrir el carrito con el id 'abrir-carrito-btn' en el header
     document.getElementById('abrir-carrito-btn').addEventListener('click', ui.abrirCarrito);
     document.getElementById('finalizar-compra-btn').addEventListener('click', finalizarCompra);
     
@@ -218,7 +216,6 @@ async function mostrarMisPedidos() {
         return;
     }
 
-    // Oculta la vista de productos y muestra la de pedidos
     document.getElementById('productos').classList.add('hidden');
     document.getElementById('mis-pedidos').classList.remove('hidden');
 
