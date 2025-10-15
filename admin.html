@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - GameHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-6">Gestión de Inventario</h1>
+        <div id="mensaje-container" class="mb-4"></div>
+        <button id="abrir-modal-crear-btn"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md mb-6 hover:bg-blue-700">Agregar Nuevo Producto</button>
+
+        <table class="min-w-full bg-white shadow-md rounded-lg">
+            <thead>
+                <tr class="bg-gray-800 text-white">
+                    <th class="py-3 px-4 text-left">ID</th>
+                    <th class="py-3 px-4 text-left">Nombre</th>
+                    <th class="py-3 px-4 text-left">Tipo</th>
+                    <th class="py-3 px-4 text-left">Precio</th>
+                    <th class="py-3 px-4 text-left">Stock</th>
+                    <th class="py-3 px-4 text-left">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-productos">
+            </tbody>
+        </table>
+        <a href="index.html" class="text-blue-600 mt-6 inline-block hover:underline">Volver a la tienda</a>
+    </div>
+
+    <div id="producto-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
+            <h2 id="modal-titulo" class="text-2xl font-bold mb-4">Agregar Producto</h2>
+            <form id="producto-form">
+                <input type="hidden" id="producto-id-input">
+                <div class="mb-4">
+                    <label for="id" class="block text-gray-700">ID del Producto</label>
+                    <input type="number" id="id" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="nombre" class="block text-gray-700">Nombre</label>
+                    <input type="text" id="nombre" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="tipo" class="block text-gray-700">Tipo</label>
+                    <select id="tipo" class="w-full p-2 border rounded" required>
+                        <option value="juego">Juego</option>
+                        <option value="consola">Consola</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="precio" class="block text-gray-700">Precio</label>
+                    <input type="number" id="precio" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="cantidad" class="block text-gray-700">Cantidad (Stock)</label>
+                    <input type="number" id="cantidad" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="imagenUrl" class="block text-gray-700">URL de la Imagen</label>
+                    <input type="url" id="imagenUrl" class="w-full p-2 border rounded"
+                        placeholder="https://ejemplo.com/imagen.png">
+                </div>
+                <div class="flex justify-end gap-4">
+                    <button type="button" id="cerrar-modal-btn"
+                        class="bg-gray-500 text-white px-4 py-2 rounded">Cancelar</button>
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-2">
+    </div>
+
+    <script type="module" src="./js/api.js"></script>
+    <script type="module" src="./js/ui.js"></script>
+    <script type="module" src="./js/admin.js"></script>
+</body>
+
+</html>
