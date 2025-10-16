@@ -62,15 +62,15 @@ El objetivo principal fue desarrollar una aplicación completa desde cero, con u
 El diseño de la interfaz de usuario de **GameHub** fue creado en **Figma**, siguiendo principios de diseño moderno y enfocado en la experiencia de compra de productos de gaming.
 
 **Pantalla principal:**  
-📸 *[IMAGEN DE TU DISEÑO DE LA PANTALLA PRINCIPAL AQUÍ]*  
+![Diseño Figma - Pantalla Principal](./docs/inicio.png)  
 
 **Carrito de compras:**  
-📸 *[IMAGEN DE TU DISEÑO DEL CARRITO DE COMPRAS AQUÍ]*  
+![Diseño Figma - carrito compras](./docs/carrito.png)
 
-**Historial de pedidos:**  
-📸 *[IMAGEN DE TU DISEÑO DEL HISTORIAL DE PEDIDOS AQUÍ]*  
+**Panel Administrativo:**  
+![Diseño Figma - panel administrador](./docs/panel_administrador.png)
 
-🔗 **Link de Figma:** [LINK A TU DISEÑO COMPLETO EN FIGMA AQUÍ]
+🔗 **Link de Figma:** [Ver diseño completo en Figma](https://www.figma.com/proto/q08CzzxRGp3ebidQS9mjQd/GAMEHUB?node-id=0-1&t=0bPZJ1ZhvCWM1KNa-1)
 
 ---
 
@@ -164,6 +164,14 @@ frontend/
     ├── main.js      # Lógica para index.html
     └── admin.js     # Lógica para admin.html
 ```
+
+---
+
+## 🔗 Repositorio del Backend
+
+El backend de esta aplicación, desarrollado con **Node.js** y **Express** se encuentra en el siguiente repositorio:
+
+> [▶️ **Ver Repositorio del Backend**](https://github.com/BryanVillabona/GameHub-Backend.git)
 
 ---
 
