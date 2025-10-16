@@ -6,6 +6,8 @@ Simula las funcionalidades de una tienda en línea de videojuegos, incluyendo la
 
 El objetivo principal fue desarrollar una aplicación completa desde cero, con un **backend** en **Node.js (Express)** que gestiona la lógica de negocio y la persistencia de datos en **MongoDB**, y un **frontend** con **HTML**, **CSS (Tailwind)** y **JavaScript puro** que consume la API creada, enfocándose en la modularidad, interactividad y una excelente experiencia de usuario.
 
+> [▶️ **Ver página en funcionamiento**](https://bryanvillabona.github.io/GameHub-Frontend/)
+
 ---
 
 ## ✨ Características Principales
